@@ -7,5 +7,8 @@
 </head>
 <body>
     <h1>ACABA PELAMOR DE DEUUUUS</h1>
+    <c:forEach var ="item" items=""${livros}>
+        ${item.titulo} <br/>
+    </c:forEach>
 </body>
 </html>

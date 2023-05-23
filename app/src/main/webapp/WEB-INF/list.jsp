@@ -25,8 +25,8 @@
                         <td>${item.titulo}</td>
                         <td>${item.isbn}</td>
                         <td>
-                            <a href="/update?id=${item.id}" class="btn btn-warning">Editar</a>
-                            <a href="/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
+                            <a href="/livro/update?id=${item.id}" class="btn btn-warning">Editar</a>
+                            <a href="/livro/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
                 </c:forEach>

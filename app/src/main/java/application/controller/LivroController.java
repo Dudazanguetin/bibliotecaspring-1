@@ -21,7 +21,7 @@ public class LivroController {
     @RequestMapping("/livro")
     public String list(Model model) {
         model.addAttribute("livros", livroRepo.findAll());
-        return "WEB-INF/list.jsp";
+        return "list";
     }
 
     @RequestMapping("/insert")

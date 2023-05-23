@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -15,6 +17,18 @@ public class Livro {
     private String titulo;
     private String isbn;
 
+    //Esse de baixo significa um para vários, poder estar com vários (viiiish)
+    @ManyToOne
+    @JoinColumn(name= "id_genero")
+    private Genero genero;
+    
+
+    public Genero getGenero() {
+        return genero;
+    }
+    public void setGenero(Genero genero) {
+        this.genero = genero;
+    }
     public String getIsbn() {
         return isbn;
     }
